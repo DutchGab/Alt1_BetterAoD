@@ -1,6 +1,7 @@
 // Typescript configuration file
 {
 	"compilerOptions": {
+        "jsx": "react",
 		// Settings to make typescript play nice with webpack
 		"resolvePackageJsonExports": true,
 		"moduleResolution": "bundler",

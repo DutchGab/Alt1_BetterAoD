@@ -3,6 +3,7 @@
 import * as a1lib from "alt1";
 import ChatBoxReader from "alt1/chatbox";
 import * as helpers from "./helpers";
+import React, {useEffect, useRef, useState} from "react"
 
 
 // tell webpack that this file relies index.html, appconfig.json and icon.png, this makes webpack
@@ -42,3 +43,29 @@ const secondsForPoolToPop = 22
 const poolReminderSeconds = [3,2,1]
 
 helpers.displayDetectionMessage("Better Aod starting test", 5000)
+
+function App(){
+    const [settingsWindow, setSettingsWindows] = useState<Window | null>(null)
+    const showSettings = () => {
+        const newWindow = window.open("", "Settings", "width = 350, height = 500")
+        if(newWindow){
+            if(newWindow.document.getElementById("root") === null){
+                newWindow.document.write(`<div id="root" style="height:100%; width:100%"></div>`)
+            }
+            setSettingsWindows(newWindow)
+        }
+    }
+
+    return <div
+    style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        minHeight: "100%",
+        minWidth: "100%",
+        backgroundColor: "#04121b",
+        backgroundImage: "url(./assets/img/background.png)"
+    }}
+    >App Component</div>
+}
