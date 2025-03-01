@@ -4,6 +4,7 @@ import * as a1lib from "alt1";
 import ChatBoxReader from "alt1/chatbox";
 import * as helpers from "./helpers";
 import React, {useEffect, useRef, useState} from "react"
+import {createRoot} from "react-dom/client"
 
 
 // tell webpack that this file relies index.html, appconfig.json and icon.png, this makes webpack
@@ -70,4 +71,7 @@ function App(){
     >App Component</div>
 }
 
-App()
+const container = document.getElementById("root")
+
+const root = createRoot(container!)
+root.render(alt1? <App /> : <div>Run this in alt1</div>)
