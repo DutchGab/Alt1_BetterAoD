@@ -6,5 +6,9 @@
 		"resolvePackageJsonExports": true,
 		"moduleResolution": "bundler",
 		"module": "ESNext",
+		"lib":[
+			"es2021",
+			 "DOM"
+		]
 	}
 }

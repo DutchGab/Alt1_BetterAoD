@@ -15,6 +15,7 @@ import "./index.html";
 import "./appconfig.json";
 import "./icon.png";
 
+var output = document.getElementById("output")
 
 const createNewReader = () => {
     const reader = new ChatBoxReader()
