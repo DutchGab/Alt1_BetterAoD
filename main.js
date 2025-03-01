@@ -31218,6 +31218,116 @@ module.exports = __webpack_require__.p + "appconfig.json";
 
 /***/ }),
 
+/***/ "./audio.ts":
+/*!******************!*\
+  !*** ./audio.ts ***!
+  \******************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   bomb: () => (/* binding */ bomb),
+/* harmony export */   cruor: () => (/* binding */ cruor),
+/* harmony export */   death: () => (/* binding */ death),
+/* harmony export */   east: () => (/* binding */ east),
+/* harmony export */   fumus: () => (/* binding */ fumus),
+/* harmony export */   glacies: () => (/* binding */ glacies),
+/* harmony export */   newkill: () => (/* binding */ newkill),
+/* harmony export */   north: () => (/* binding */ north),
+/* harmony export */   pool: () => (/* binding */ pool),
+/* harmony export */   poolPop: () => (/* binding */ poolPop),
+/* harmony export */   umbra: () => (/* binding */ umbra),
+/* harmony export */   updateBombVolume: () => (/* binding */ updateBombVolume),
+/* harmony export */   updateDeathVolume: () => (/* binding */ updateDeathVolume),
+/* harmony export */   updateMinionVolume: () => (/* binding */ updateMinionVolume),
+/* harmony export */   updateNewKillVolume: () => (/* binding */ updateNewKillVolume),
+/* harmony export */   updatePoolVolume: () => (/* binding */ updatePoolVolume),
+/* harmony export */   updateSmokeVolume: () => (/* binding */ updateSmokeVolume)
+/* harmony export */ });
+var newkill = new Audio("./assets/audio/NewKill/1.mp3");
+var north = new Audio("./assets/audio/North/1.mp3");
+var east = new Audio("./assets/audio/East/1.mp3");
+var pool = new Audio("./assets/audio/Pool/1.mp3");
+var poolPop = new Audio("./assets/audio/PoolPopping/1.mp3");
+var bomb = new Audio("./assets/audio/Bomb/1.mp3");
+var umbra = new Audio("./assets/audio/Umbra/1.mp3");
+var glacies = new Audio("./assets/audio/Glacies/1.mp3");
+var cruor = new Audio("./assets/audio/Cruor/1.mp3");
+var fumus = new Audio("./assets/audio/Fumus/1.mp3");
+var death = new Audio("./assets/audio/Death/1.mp3");
+var updateNewKillVolume = function (volume) {
+    newkill.volume = volume;
+};
+var updateSmokeVolume = function (volume) {
+    north.volume = volume;
+    east.volume = volume;
+};
+var updatePoolVolume = function (volume) {
+    pool.volume = volume;
+    poolPop.volume = volume;
+};
+var updateBombVolume = function (volume) {
+    bomb.volume = volume;
+};
+var updateMinionVolume = function (volume) {
+    umbra.volume = volume;
+    glacies.volume = volume;
+    cruor.volume = volume;
+    fumus.volume = volume;
+};
+var updateDeathVolume = function (volume) {
+    death.volume = volume;
+};
+
+
+/***/ }),
+
+/***/ "./data.ts":
+/*!*****************!*\
+  !*** ./data.ts ***!
+  \*****************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   minionList: () => (/* binding */ minionList),
+/* harmony export */   minions: () => (/* binding */ minions)
+/* harmony export */ });
+/* harmony import */ var _audio__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./audio */ "./audio.ts");
+
+var minions = {
+    Umbra: {
+        name: "Umbra",
+        initial: "U",
+        color: "#904090",
+        audio: _audio__WEBPACK_IMPORTED_MODULE_0__.umbra
+    },
+    Glacies: {
+        name: "Glacies",
+        initial: "G",
+        color: "#2090A0",
+        audio: _audio__WEBPACK_IMPORTED_MODULE_0__.glacies
+    },
+    Cruor: {
+        name: "Cruor",
+        initial: "C",
+        color: "#A04040",
+        audio: _audio__WEBPACK_IMPORTED_MODULE_0__.cruor
+    },
+    Fumus: {
+        name: "Fumus",
+        initial: "F",
+        color: "#708070",
+        audio: _audio__WEBPACK_IMPORTED_MODULE_0__.fumus
+    }
+};
+var minionList = Object.values(minions);
+
+
+/***/ }),
+
 /***/ "./helpers.ts":
 /*!********************!*\
   !*** ./helpers.ts ***!
@@ -31228,16 +31338,34 @@ module.exports = __webpack_require__.p + "appconfig.json";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   alt1: () => (/* binding */ alt1),
-/* harmony export */   displayDetectionMessage: () => (/* binding */ displayDetectionMessage)
+/* harmony export */   deduveLastMinion: () => (/* binding */ deduveLastMinion),
+/* harmony export */   displayDetectionMessage: () => (/* binding */ displayDetectionMessage),
+/* harmony export */   getMinionFromInitial: () => (/* binding */ getMinionFromInitial)
 /* harmony export */ });
-/* harmony import */ var alt1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alt1 */ "../node_modules/alt1/dist/base/index.js");
-/* harmony import */ var alt1__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(alt1__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var alt1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! alt1 */ "../node_modules/alt1/dist/base/index.js");
+/* harmony import */ var alt1__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(alt1__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data */ "./data.ts");
+
 
 var alt1 = window.alt1;
 var displayDetectionMessage = function (message, duration, size) {
     alt1 === null || alt1 === void 0 ? void 0 : alt1.overLayClearGroup("1");
     alt1 === null || alt1 === void 0 ? void 0 : alt1.overLaySetGroup("1");
-    alt1 === null || alt1 === void 0 ? void 0 : alt1.overLayTextEx(message, alt1__WEBPACK_IMPORTED_MODULE_0__.mixColor(220, 30, 30), size || 48, Math.round(alt1.rsWidth / 2), Math.round(alt1.rsHeight / 4), duration, "serif", true, true);
+    alt1 === null || alt1 === void 0 ? void 0 : alt1.overLayTextEx(message, alt1__WEBPACK_IMPORTED_MODULE_1__.mixColor(220, 30, 30), size || 48, Math.round(alt1.rsWidth / 2), Math.round(alt1.rsHeight / 4), duration, "serif", true, true);
+};
+var getMinionFromInitial = function (initial) {
+    var result = _data__WEBPACK_IMPORTED_MODULE_0__.minionList.find(function (minion) { return minion.initial === initial; });
+    if (!result) {
+        console.error("No minion found with initial ".concat(initial));
+        return null;
+    }
+    return result;
+};
+var deduveLastMinion = function (order) {
+    var minionsNotIncluded = _data__WEBPACK_IMPORTED_MODULE_0__.minionList.filter(function (minion) { return !order.includes(minion); });
+    if (minionsNotIncluded.length === 1) {
+        return minionsNotIncluded[0];
+    }
 };
 
 
@@ -31452,6 +31580,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var output = document.getElementById("output");
 var createNewReader = function () {
     var reader = new (alt1_chatbox__WEBPACK_IMPORTED_MODULE_6___default())();
     reader.readargs = {
