@@ -69,3 +69,5 @@ function App(){
     }}
     >App Component</div>
 }
+
+App()
