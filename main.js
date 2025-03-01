@@ -4269,7 +4269,7 @@ var createNewReader = function () {
 };
 var secondsForPoolToPop = 22;
 var poolReminderSeconds = [3, 2, 1];
-_helpers__WEBPACK_IMPORTED_MODULE_0__.displayDetectionMessage("Better Aod starting", 5000);
+_helpers__WEBPACK_IMPORTED_MODULE_0__.displayDetectionMessage("Better Aod starting test", 5000);
 
 })();
 
