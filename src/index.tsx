@@ -70,10 +70,10 @@ function App(){
         backgroundColor: "#04121b",
         backgroundImage: "url(/assets/img/background.png)"
     }}
-    >App Component</div>
+    >Better AoD</div>
 }
 
-const container = document.getElementById("root")
+//const container = document.getElementById("root")
 
-const root = createRoot(container!)
-root.render(alt1? <App /> : <div>Run this in alt1</div>)
+//const root = createRoot(container!)
+//root.render(alt1? <App /> : <div>Run this in alt1</div>)
