@@ -5782,9 +5782,9 @@ var __webpack_exports__ = {};
 // This entry needs to be wrapped in an IIFE because it needs to be in strict mode.
 (() => {
 "use strict";
-/*!******************!*\
-  !*** ./index.ts ***!
-  \******************/
+/*!*******************!*\
+  !*** ./index.tsx ***!
+  \*******************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var alt1__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! alt1 */ "../node_modules/alt1/dist/base/index.js");
 /* harmony import */ var alt1__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(alt1__WEBPACK_IMPORTED_MODULE_6__);
@@ -5845,6 +5845,16 @@ function App() {
             setSettingsWindows(newWindow);
         }
     };
+    return react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", { style: {
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            minHeight: "100%",
+            minWidth: "100%",
+            backgroundColor: "#04121b",
+            backgroundImage: "url(./assets/img/background.png)"
+        } }, "App Component");
 }
 
 })();
