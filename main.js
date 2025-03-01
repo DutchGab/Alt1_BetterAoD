@@ -31624,6 +31624,7 @@ function App() {
             alignItems: "center",
             minHeight: "100%",
             minWidth: "100%",
+            color: "white",
             backgroundColor: "#04121b",
             backgroundImage: "url(/assets/img/background.png)"
         } }, "App Component");
