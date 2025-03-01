@@ -5856,6 +5856,7 @@ function App() {
             backgroundImage: "url(/assets/img/background.png)"
         } }, "App Component");
 }
+App();
 
 })();
 
