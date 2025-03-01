@@ -73,7 +73,7 @@ function App(){
     >Better AoD</div>
 }
 
-//const container = document.getElementById("root")
+const container = document.getElementById("root")
 
-//const root = createRoot(container!)
-//root.render(alt1? <App /> : <div>Run this in alt1</div>)
+const root = createRoot(container!)
+root.render(alt1? <App /> : <div>Run this in alt1</div>)
