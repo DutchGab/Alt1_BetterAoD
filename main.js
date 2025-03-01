@@ -5853,7 +5853,7 @@ function App() {
             minHeight: "100%",
             minWidth: "100%",
             backgroundColor: "#04121b",
-            backgroundImage: "url(./assets/img/background.png)"
+            backgroundImage: "url(/assets/img/background.png)"
         } }, "App Component");
 }
 
