@@ -5984,7 +5984,7 @@ function App() {
             color: "white",
             backgroundColor: "#04121b",
             backgroundImage: "url(/assets/img/background.png)"
-        } }, "App Component");
+        } }, "Better AoD");
 }
 //const container = document.getElementById("root")
 //const root = createRoot(container!)
