@@ -1,4 +1,7 @@
 {
+	"name": "alt1-betteraod",
+	"version": "0.1.0",
+	"main": "src/index.js",
 	"scripts": {
 		"build": "webpack",
 		"watch": "webpack --watch",
@@ -6,7 +9,8 @@
 	},
 	"dependencies": {
 		"alt1": "^0.1.0",
-		"gh-pages": "^6.3.0"
+		"gh-pages": "^6.3.0",
+		"react": "^19.0.0"
 	},
 	"devDependencies": {
 		"@types/node": "^12.12.54",

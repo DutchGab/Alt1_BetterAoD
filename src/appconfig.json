@@ -1,16 +1,16 @@
 {
-	"appName": "example app",
-	"description": "minimal alt1 webpack/ts example test app",
+	"appName": "BestAoD",
+	"description": "A rewrite of the BetterAoD alt1 plugin",
 	"appUrl": "./index.html",
 	"configUrl": "./appconfig.json",
 	"iconUrl": "./icon.png",
-	"defaultWidth": 250,
-	"defaultHeight": 250,
-	"minWidth": 250,
-	"minHeight": 180,
-	"maxWidth": 1000,
-	"maxHeight": 1000,
+	"defaultWidth": 400,
+	"defaultHeight": 400,
+	"minWidth": 125,
+	"minHeight": 50,
+	"maxWidth": 500,
+	"maxHeight": 500,
 	"requestHandlers": [ ],
 	"activators": [	],
-	"permissions": "pixel,overlay"
+	"permissions": "pixel,overlay, gamestate"
 }
